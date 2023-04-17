@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:project_starbhak_piket/pages/absensiDataSiswaPage.dart';
+import 'package:project_starbhak_piket/pages/absensiDokumPage.dart';
 import 'package:project_starbhak_piket/pages/absensiPage.dart';
+import 'package:project_starbhak_piket/pages/absensiRekapPage.dart';
 import 'package:project_starbhak_piket/pages/auth/loginPage.dart';
 import 'package:project_starbhak_piket/pages/auth/signUpPage.dart';
 
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: AbsensiPage(),
+      home: AbsensiRekapPage(),
     );
   }
 }
