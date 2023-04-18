@@ -17,11 +17,14 @@ class editProfile extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  Icons.arrow_back_ios_new_rounded,
+                IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(Icons.arrow_back_ios_new_rounded),
                 ),
                 Container(
-                  width: 140,
+                  width: 220,
                   height: 50,
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -37,7 +40,7 @@ class editProfile extends StatelessWidget {
                       ]),
                   child: Container(
                     child: Center(
-                      child: Text("Pilih Siswa",
+                      child: Text("Ubah Data Pengguna",
                           style: GoogleFonts.quicksand(
                               textStyle: TextStyle(
                             fontWeight: FontWeight.w700,

@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_starbhak_piket/components/bottomNavigation.dart';
+import 'package:project_starbhak_piket/pages/editProfile.dart';
 
 class profile extends StatelessWidget {
   const profile({super.key});
@@ -104,7 +105,12 @@ class profile extends StatelessWidget {
             width: 350,
             height: 50,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                 Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => editProfile()));
+              },
               child: Text("Ubah Data Pengguna",
                   style: GoogleFonts.quicksand(
                       textStyle: TextStyle(
