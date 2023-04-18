@@ -3,10 +3,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_starbhak_piket/components/bottomNavigation.dart';
-import 'package:project_starbhak_piket/pages/changeEmail.dart';
 
-class editProfile extends StatelessWidget {
-  const editProfile({super.key});
+class changeEmail extends StatelessWidget {
+  const changeEmail({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +13,7 @@ class editProfile extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.only(top: 25, left: 30, right: 30),
+            padding: EdgeInsets.only(top: 20, left: 30, right: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -25,7 +24,7 @@ class editProfile extends StatelessWidget {
                   icon: Icon(Icons.arrow_back_ios_new_rounded),
                 ),
                 Container(
-                  width: 220,
+                  width: 150,
                   height: 50,
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -41,7 +40,7 @@ class editProfile extends StatelessWidget {
                       ]),
                   child: Container(
                     child: Center(
-                      child: Text("Ubah Data Pengguna",
+                      child: Text("Ubah Email",
                           style: GoogleFonts.quicksand(
                               textStyle: TextStyle(
                             fontWeight: FontWeight.w700,
@@ -54,35 +53,21 @@ class editProfile extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(bottom: 40),
-            child: Center(
-              child: Column(
-                children: [
-                  Container(
-                      margin: EdgeInsets.only(top: 80, bottom: 20),
-                      width: 200,
-                      height: 200,
-                      child: CircleAvatar(
-                        backgroundImage: NetworkImage(
-                            'https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80'),
-                      )),
-                  Text(
-                    'Ubah Foto',
-                    style: GoogleFonts.quicksand(
-                        textStyle: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.black87)),
-                  )
-                ],
-              ),
+            padding: EdgeInsets.all(50),
+            margin: EdgeInsets.only(top: 40, bottom: 30),
+            width: 300,
+            height: 300,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Color(0xff7F669D),
             ),
+            child: Image(image: NetworkImage('https://cdn-icons-png.flaticon.com/512/3062/3062634.png'),),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Nama Pengguna',
+                'Email Lama',
                 style: GoogleFonts.quicksand(
                     textStyle: TextStyle(
                         fontSize: 16,
@@ -103,7 +88,7 @@ class editProfile extends StatelessWidget {
                         style: BorderStyle.solid,
                         width: 2),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
-                child: Text('Sheyla Aulya',
+                child: Text('sheyla@gmail.com',
                     style: GoogleFonts.quicksand(
                         textStyle: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w600))),
@@ -114,7 +99,7 @@ class editProfile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Email Pengguna',
+                'Email Baru',
                 style: GoogleFonts.quicksand(
                     textStyle: TextStyle(
                         fontSize: 16,
@@ -125,7 +110,7 @@ class editProfile extends StatelessWidget {
                 height: 5,
               ),
               Container(
-                margin: EdgeInsets.only(bottom: 5),
+                margin: EdgeInsets.only(bottom: 20),
                 padding: EdgeInsets.only(top: 12, left: 20),
                 width: 350,
                 height: 50,
@@ -135,27 +120,11 @@ class editProfile extends StatelessWidget {
                         style: BorderStyle.solid,
                         width: 2),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
-                child: Text('sheyla@gmail.com',
+                child: Text('sheyla2@gmail.com',
                     style: GoogleFonts.quicksand(
                         textStyle: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w600))),
               ),
-              Container(
-                  margin: EdgeInsets.only(left: 200, bottom: 20),
-                  child: TextButton(
-                      onPressed: () {
-                         Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => changeEmail()));
-                      },
-                      child: Text('Ubah Email Pengguna',
-                          textAlign: TextAlign.end,
-                          style: GoogleFonts.quicksand(
-                              textStyle: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.black87)))))
             ],
           ),
           Container(
@@ -163,7 +132,7 @@ class editProfile extends StatelessWidget {
             height: 50,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text("Simpan Perubahan",
+              child: Text("Verifikasi",
                   style: GoogleFonts.quicksand(
                       textStyle: TextStyle(
                           fontSize: 16, fontWeight: FontWeight.w800))),

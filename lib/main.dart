@@ -6,6 +6,7 @@ import 'package:project_starbhak_piket/pages/absensiPage.dart';
 import 'package:project_starbhak_piket/pages/absensiRekapPage.dart';
 import 'package:project_starbhak_piket/pages/auth/loginPage.dart';
 import 'package:project_starbhak_piket/pages/auth/signUpPage.dart';
+import 'package:project_starbhak_piket/pages/changeEmail.dart';
 import 'package:project_starbhak_piket/pages/editProfile.dart';
 import 'package:project_starbhak_piket/pages/homePage.dart';
 import 'package:project_starbhak_piket/pages/profile.dart';
