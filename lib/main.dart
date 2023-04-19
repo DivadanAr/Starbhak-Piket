@@ -7,6 +7,8 @@ import 'package:project_starbhak_piket/pages/absensiRekapPage.dart';
 import 'package:project_starbhak_piket/pages/auth/loginPage.dart';
 import 'package:project_starbhak_piket/pages/auth/signUpPage.dart';
 import 'package:project_starbhak_piket/pages/changeEmail.dart';
+import 'package:project_starbhak_piket/pages/chart.dart';
+import 'package:project_starbhak_piket/pages/dataSiswa.dart';
 import 'package:project_starbhak_piket/pages/editProfile.dart';
 import 'package:project_starbhak_piket/pages/homePage.dart';
 import 'package:project_starbhak_piket/pages/profile.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: profile(),
+      home: dataSiswa(),
     );
   }
 }
