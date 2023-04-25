@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:d_chart/d_chart.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
             child: Stack(children: [
               Flexible(
                 child: Container(
-                  padding: EdgeInsets.only(top: 30, left: 30, right: 25),
+                  padding: EdgeInsets.only(top: 20, left: 30, right: 25),
                   height: 100,
                   width: MediaQuery.of(context).size.width,
                   child: Row(
@@ -74,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 80, left: 30),
+                margin: EdgeInsets.only(top: 70, left: 30),
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
@@ -163,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                                                                     .day !=
                                                                 currentDateTime
                                                                     .day)
-                                                            ? Colors.black
+                                                            ? Colors.black54
                                                             : Colors.white),
                                               ),
                                             ],
@@ -180,9 +181,9 @@ class _HomePageState extends State<HomePage> {
                       width: 350,
                       height: 140,
                       decoration: BoxDecoration(
-                          color: Color(0xff7F669D),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                          boxShadow: [
+                        color: Color(0xff7F669D),
+                        borderRadius: BorderRadius.all(Radius.circular(20)),
+                        boxShadow: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.3),
                             offset: const Offset(
@@ -193,9 +194,7 @@ class _HomePageState extends State<HomePage> {
                             spreadRadius: 0.4,
                           )
                         ],
-                          
-                          ),
-                          
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -270,7 +269,6 @@ class _HomePageState extends State<HomePage> {
                                     end: Alignment.bottomCenter),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10))),
-                                    
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -378,7 +376,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 340, left: 30),
+                margin: EdgeInsets.only(top: 330, left: 30),
                 padding: EdgeInsets.all(20),
                 width: 350,
                 height: 120,
@@ -444,7 +442,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(top: 475, left: 35),
+                margin: EdgeInsets.only(top: 465, left: 35),
                 alignment: Alignment.topLeft,
                 child: Text(
                   'Statistik Kehadiran Siswa',
@@ -456,9 +454,9 @@ class _HomePageState extends State<HomePage> {
               Row(
                 children: [
                   Container(
-                    margin: EdgeInsets.only(top: 505, left: 35),
-                    width: 180,
-                    height: 180,
+                    margin: EdgeInsets.only(top: 495, left: 35),
+                    width: 200,
+                    height: 200,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         boxShadow: [
@@ -473,9 +471,60 @@ class _HomePageState extends State<HomePage> {
                           )
                         ],
                         borderRadius: BorderRadius.all(Radius.circular(10))),
+                    child: Column(
+                      children: [
+                        AspectRatio(
+                          aspectRatio: 16 / 16,
+                          child: Stack(
+                            children: [
+                              DChartPie(
+                                data: [
+                                  {'domain': 'sakit', 'measure': 40},
+                                  {'domain': 'izin', 'measure': 30},
+                                  {'domain': 'alfa', 'measure': 30},
+                                ],
+                                fillColor: (pieData, index) {
+                                  switch (pieData['domain']) {
+                                    case 'sakit':
+                                      return Color(0xff7F669D);
+                                    case 'izin':
+                                      return Color(0xffDEBACE);
+                                    case 'alfa':
+                                      return Color(0xffBA94D1);
+                                    default:
+                                      return Colors.grey;
+                                  }
+                                },
+                                donutWidth: 23,
+                                labelColor: Colors.transparent,
+                              ),
+                              Align(
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text('Bulan',  style: GoogleFonts.quicksand(
+                                        textStyle: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.black54,
+                                            fontWeight: FontWeight.w800)),),
+                                      Text(
+                                date_util.DateUtils.months[currentDateTime.month - 1],
+                                style: GoogleFonts.quicksand(
+                                        textStyle: TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.w900)),
+                              ),
+                                    ],
+                                  )),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 500, left: 20),
+                    margin: EdgeInsets.only(top: 495, left: 20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -483,8 +532,8 @@ class _HomePageState extends State<HomePage> {
                           height: 10,
                         ),
                         Container(
-                          width: 150,
-                          height: 50,
+                          width: 120,
+                          height: 60,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
@@ -501,15 +550,38 @@ class _HomePageState extends State<HomePage> {
                                 )
                               ]),
                           child: Container(
-                            padding: EdgeInsets.only(right: 20, left: 20),
+                            padding: EdgeInsets.only(right: 20,),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   
                               children: [
-                                Container(
-                                  width: 10,
-                                  height: 10,
-                                  color: Colors.black,
-                                ),
+                              AspectRatio(
+                          aspectRatio: 5 / 6,
+                          child: Stack(
+                            children: [
+                              DChartPie(
+                                data: [
+                                  {'domain': 'sakit', 'measure': 40},
+                                  {'domain': 'izin', 'measure': 30},
+                                  {'domain': 'alfa', 'measure': 30},
+                                ],
+                                fillColor: (pieData, index) {
+                                  switch (pieData['domain']) {
+                                  
+                                    case 'izin':
+                                      return Color(0xffDEBACE);
+                              
+                                    default:
+                                      return Colors.grey;
+                                  }
+                                },
+                                donutWidth: 3,
+                                labelColor: Colors.transparent,
+                              ),
+                              
+                            ],
+                          ),
+                        ),
                                 SizedBox(
                                   width: 10,
                                 ),
@@ -528,8 +600,8 @@ class _HomePageState extends State<HomePage> {
                           height: 10,
                         ),
                         Container(
-                          width: 150,
-                          height: 50,
+                          width: 120,
+                          height: 60,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
@@ -546,15 +618,39 @@ class _HomePageState extends State<HomePage> {
                                 )
                               ]),
                           child: Container(
-                            padding: EdgeInsets.only(right: 20, left: 20),
+                            padding: EdgeInsets.only(right: 20,),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   
                               children: [
-                                Container(
-                                  width: 10,
-                                  height: 10,
-                                  color: Colors.black,
-                                ),
+                              AspectRatio(
+                          aspectRatio: 5 / 6,
+                          child: Stack(
+                            children: [
+                              DChartPie(
+                                data: [
+                                  {'domain': 'sakit', 'measure': 40},
+                                  {'domain': 'izin', 'measure': 30},
+                                  {'domain': 'alfa', 'measure': 30},
+                                ],
+                                fillColor: (pieData, index) {
+                                  switch (pieData['domain']) {
+                                  
+                                     case 'sakit':
+                                      return Color(0xff7F669D);
+                                  
+                              
+                                    default:
+                                      return Colors.grey;
+                                  }
+                                },
+                                donutWidth: 3,
+                                labelColor: Colors.transparent,
+                              ),
+                              
+                            ],
+                          ),
+                        ),
                                 SizedBox(
                                   width: 10,
                                 ),
@@ -562,7 +658,7 @@ class _HomePageState extends State<HomePage> {
                                   'Sakit',
                                   style: GoogleFonts.quicksand(
                                       textStyle: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: 16,
                                           fontWeight: FontWeight.w700)),
                                 )
                               ],
@@ -573,8 +669,8 @@ class _HomePageState extends State<HomePage> {
                           height: 10,
                         ),
                         Container(
-                          width: 150,
-                          height: 50,
+                          width: 120,
+                          height: 60,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
@@ -591,15 +687,37 @@ class _HomePageState extends State<HomePage> {
                                 )
                               ]),
                           child: Container(
-                            padding: EdgeInsets.only(right: 20, left: 20),
+                            padding: EdgeInsets.only(right: 20,),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   
                               children: [
-                                Container(
-                                  width: 10,
-                                  height: 10,
-                                  color: Colors.black,
-                                ),
+                              AspectRatio(
+                          aspectRatio: 5 / 6,
+                          child: Stack(
+                            children: [
+                              DChartPie(
+                                data: [
+                                  {'domain': 'sakit', 'measure': 40},
+                                  {'domain': 'izin', 'measure': 30},
+                                  {'domain': 'alfa', 'measure': 30},
+                                ],
+                                fillColor: (pieData, index) {
+                                  switch (pieData['domain']) {
+                                
+                                    case 'alfa':
+                                      return Color(0xffBA94D1);
+                                    default:
+                                      return Colors.grey;
+                                  }
+                                },
+                                donutWidth: 3,
+                                labelColor: Colors.transparent,
+                              ),
+                              
+                            ],
+                          ),
+                        ),
                                 SizedBox(
                                   width: 10,
                                 ),
@@ -623,7 +741,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               Container(
-                       margin: EdgeInsets.only(bottom: 10),
+                margin: EdgeInsets.only(bottom: 10, top: 10),
                 child: Row(
                   children: [
                     Container(
@@ -631,9 +749,9 @@ class _HomePageState extends State<HomePage> {
                       width: 110,
                       height: 110,
                       decoration: BoxDecoration(
-                      color:   Color(0xff7F669D),
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      boxShadow: [
+                        color: Color(0xff7F669D),
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        boxShadow: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.3),
                             offset: const Offset(
@@ -650,49 +768,19 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Container(
                               width: 50,
-                            height: 50,
-                            child: Image.asset('assets/images/schedule.png')),
-                          SizedBox(height: 10,),
-                          Text('Jadwal Piket', style: GoogleFonts.quicksand(
-                            textStyle: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12
-                            )
-                          ),)
-                        ],
-                      ),
-                    ),
-                  Container(
-                      margin: EdgeInsets.only(top: 710, left: 10),
-                      width: 110,
-                      height: 110,
-                      decoration: BoxDecoration(
-                      color:   Color(0xff7F669D),
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            offset: const Offset(
-                              1.0,
-                              1.0,
-                            ),
-                            blurRadius: 2.0,
-                            spreadRadius: 0.4,
+                              height: 50,
+                              child: Image.asset('assets/images/schedule.png')),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'Jadwal Piket',
+                            style: GoogleFonts.quicksand(
+                                textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12)),
                           )
-                        ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 50,
-                            height: 50,
-                            child: Image.asset('assets/images/students-cap.png')),
-                          SizedBox(height: 10,),
-                          Text('Data Siswa', style: GoogleFonts.quicksand(
-                            textStyle: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12
-                            )
-                          ),)
                         ],
                       ),
                     ),
@@ -701,9 +789,9 @@ class _HomePageState extends State<HomePage> {
                       width: 110,
                       height: 110,
                       decoration: BoxDecoration(
-                      color:   Color(0xff7F669D),
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      boxShadow: [
+                        color: Color(0xff7F669D),
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        boxShadow: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.3),
                             offset: const Offset(
@@ -719,20 +807,65 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                     
-                            width: 50,
-                            height: 50,
-                            child: Image.asset('assets/images/guest-list.png')),
-                          SizedBox(height: 10,),
-                          Text('Buku Tamu', style: GoogleFonts.quicksand(
-                            textStyle: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12
-                            )
-                          ),)
+                              width: 50,
+                              height: 50,
+                              child: Image.asset(
+                                  'assets/images/students-cap.png')),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'Data Siswa',
+                            style: GoogleFonts.quicksand(
+                                textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12)),
+                          )
                         ],
                       ),
                     ),
-                 
+                    Container(
+                      margin: EdgeInsets.only(top: 710, left: 10),
+                      width: 110,
+                      height: 110,
+                      decoration: BoxDecoration(
+                        color: Color(0xff7F669D),
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.3),
+                            offset: const Offset(
+                              1.0,
+                              1.0,
+                            ),
+                            blurRadius: 2.0,
+                            spreadRadius: 0.4,
+                          )
+                        ],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                              width: 50,
+                              height: 50,
+                              child:
+                                  Image.asset('assets/images/guest-list.png')),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            'Buku Tamu',
+                            style: GoogleFonts.quicksand(
+                                textStyle: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12)),
+                          )
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               )
