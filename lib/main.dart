@@ -14,6 +14,7 @@ import 'package:project_starbhak_piket/pages/homePage.dart';
 import 'package:project_starbhak_piket/pages/keterlambatan.dart';
 import 'package:project_starbhak_piket/pages/profile.dart';
 import 'package:project_starbhak_piket/pages/rekapitulasi.dart';
+import 'package:project_starbhak_piket/pages/tambahDataSiswa.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: keterlambatan()
+      home: addSiswa()
     );
   }
 }
