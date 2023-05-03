@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project_starbhak_piket/components/bottomNavigation.dart';
+import 'package:project_starbhak_piket/pages/dataSiswa.dart';
 import 'utils/date.dart' as date_util;
 
 class HomePage extends StatefulWidget {
@@ -743,130 +744,192 @@ class _HomePageState extends State<HomePage> {
               ),
               Container(
                 margin: EdgeInsets.only(bottom: 10, top: 10),
-                child: Row(
+                child: Column(
                   children: [
-                    Container(
-                      margin: EdgeInsets.only(top: 710, left: 35),
-                      width: 110,
-                      height: 110,
-                      decoration: BoxDecoration(
-                        color: Color(0xff7F669D),
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            offset: const Offset(
-                              1.0,
-                              1.0,
+                    Row(
+                      children: [
+                        GestureDetector(
+                            // onTap: () => Navigator.push(context,  MaterialPageRoute(builder: (context) => dataSiswa())),
+                          child: Container(
+                            margin: EdgeInsets.only(top: 710, left: 35),
+                            width: 165,
+                            height: 110,
+                            decoration: BoxDecoration(
+                              color: Color(0xff7F669D),
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.3),
+                                  offset: const Offset(
+                                    1.0,
+                                    1.0,
+                                  ),
+                                  blurRadius: 2.0,
+                                  spreadRadius: 0.4,
+                                )
+                              ],
                             ),
-                            blurRadius: 2.0,
-                            spreadRadius: 0.4,
-                          )
-                        ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                              width: 50,
-                              height: 50,
-                              child: Image.asset('assets/images/schedule.png')),
-                          SizedBox(
-                            height: 10,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                    width: 50,
+                                    height: 50,
+                                    child: Image.asset('assets/images/schedule.png')),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'Jadwal Piket',
+                                  style: GoogleFonts.quicksand(
+                                      textStyle: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12)),
+                                )
+                              ],
+                            ),
                           ),
-                          Text(
-                            'Jadwal Piket',
-                            style: GoogleFonts.quicksand(
-                                textStyle: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 12)),
-                          )
-                        ],
+                        ),
+                        GestureDetector(
+                          onTap: () => Navigator.push(context,  MaterialPageRoute(builder: (context) => dataSiswa())),
+                          child: Container(
+                            margin: EdgeInsets.only(top: 710, left: 10),
+                            width: 165,
+                            height: 110,
+                            decoration: BoxDecoration(
+                              color: Color(0xff7F669D),
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.3),
+                                  offset: const Offset(
+                                    1.0,
+                                    1.0,
+                                  ),
+                                  blurRadius: 2.0,
+                                  spreadRadius: 0.4,
+                                )
+                              ],
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                    width: 50,
+                                    height: 50,
+                                    child: Image.asset(
+                                        'assets/images/students-cap.png')),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'Data Siswa',
+                                  style: GoogleFonts.quicksand(
+                                      textStyle: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12)),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                       Row(
+                      children: [
+                        GestureDetector(
+                        // onTap: () => Navigator.push(context,  MaterialPageRoute(builder: (context) => ())),
+                      child: Container(
+                        margin: EdgeInsets.only(top: 10, left: 35),
+                        width: 165,
+                        height: 110,
+                        decoration: BoxDecoration(
+                          color: Color(0xff7F669D),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.3),
+                              offset: const Offset(
+                                1.0,
+                                1.0,
+                              ),
+                              blurRadius: 2.0,
+                              spreadRadius: 0.4,
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                                width: 50,
+                                height: 50,
+                                child:
+                                    Image.asset('assets/images/guest-list.png')),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              'Buku Tamu',
+                              style: GoogleFonts.quicksand(
+                                  textStyle: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12)),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.only(top: 710, left: 10),
-                      width: 110,
-                      height: 110,
-                      decoration: BoxDecoration(
-                        color: Color(0xff7F669D),
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            offset: const Offset(
-                              1.0,
-                              1.0,
+                        GestureDetector(
+                          // onTap: () => Navigator.push(context,  MaterialPageRoute(builder: (context) => dataSiswa())),
+                          child: Container(
+                            margin: EdgeInsets.only(top: 10, left: 10),
+                            width: 165,
+                            height: 110,
+                            decoration: BoxDecoration(
+                              color: Color(0xff7F669D),
+                              borderRadius: BorderRadius.all(Radius.circular(10)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.3),
+                                  offset: const Offset(
+                                    1.0,
+                                    1.0,
+                                  ),
+                                  blurRadius: 2.0,
+                                  spreadRadius: 0.4,
+                                )
+                              ],
                             ),
-                            blurRadius: 2.0,
-                            spreadRadius: 0.4,
-                          )
-                        ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                              width: 50,
-                              height: 50,
-                              child: Image.asset(
-                                  'assets/images/students-cap.png')),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            'Data Siswa',
-                            style: GoogleFonts.quicksand(
-                                textStyle: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 12)),
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 710, left: 10),
-                      width: 110,
-                      height: 110,
-                      decoration: BoxDecoration(
-                        color: Color(0xff7F669D),
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            offset: const Offset(
-                              1.0,
-                              1.0,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Container(
+                                    width: 50,
+                                    height: 50,
+                                    child: Image.asset(
+                                        'assets/images/violence.png')),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'Pelanggaran Siswa',
+                                  style: GoogleFonts.quicksand(
+                                      textStyle: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 12)),
+                                )
+                              ],
                             ),
-                            blurRadius: 2.0,
-                            spreadRadius: 0.4,
-                          )
-                        ],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                              width: 50,
-                              height: 50,
-                              child:
-                                  Image.asset('assets/images/guest-list.png')),
-                          SizedBox(
-                            height: 10,
                           ),
-                          Text(
-                            'Buku Tamu',
-                            style: GoogleFonts.quicksand(
-                                textStyle: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 12)),
-                          )
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
+                    
                   ],
                 ),
               )

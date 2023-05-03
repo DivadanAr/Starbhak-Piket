@@ -302,13 +302,18 @@ class rekap extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20,),
-                  Text('Laporan Keterlambatan', style: GoogleFonts.quicksand(
-                                    textStyle: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.black,
-                                  fontSize: 20,
-                                )),),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Laporan Keterlambatan',
+                    style: GoogleFonts.quicksand(
+                        textStyle: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black,
+                      fontSize: 20,
+                    )),
+                  ),
                   Container(
                     margin: EdgeInsets.only(top: 10, bottom: 20),
                     padding: EdgeInsets.only(top: 5),
@@ -373,19 +378,19 @@ class rekap extends StatelessWidget {
                               height: 110,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
                               ),
                               child: Column(
                                 children: [
                                   Container(
                                     padding: EdgeInsets.only(bottom: 10),
                                     decoration: BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          style: BorderStyle.solid, width: 2, color: Colors.black45
-                                        )
-                                      )
-                                    ),
+                                        border: Border(
+                                            bottom: BorderSide(
+                                                style: BorderStyle.solid,
+                                                width: 2,
+                                                color: Colors.black45))),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -420,12 +425,9 @@ class rekap extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                
                                   Container(
                                     padding: EdgeInsets.only(top: 5),
-                                    decoration: BoxDecoration(
-                                      
-                                    ),
+                                    decoration: BoxDecoration(),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -460,11 +462,9 @@ class rekap extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                   Container(
+                                  Container(
                                     padding: EdgeInsets.only(top: 5),
-                                    decoration: BoxDecoration(
-                                      
-                                    ),
+                                    decoration: BoxDecoration(),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -499,7 +499,6 @@ class rekap extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                               
                                 ],
                               ),
                             ),
@@ -539,14 +538,18 @@ class rekap extends StatelessWidget {
                       ],
                     ),
                   ),
-
-                  SizedBox(height: 10,),
-                  Text('Laporan Kunjungan Tamu', style: GoogleFonts.quicksand(
-                                    textStyle: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  color: Colors.black,
-                                  fontSize: 20,
-                                )),),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'Laporan Kunjungan Tamu',
+                    style: GoogleFonts.quicksand(
+                        textStyle: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black,
+                      fontSize: 20,
+                    )),
+                  ),
                   Container(
                     margin: EdgeInsets.only(top: 10, bottom: 20),
                     padding: EdgeInsets.only(top: 5),
@@ -611,19 +614,19 @@ class rekap extends StatelessWidget {
                               height: 140,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                borderRadius: BorderRadius.all(Radius.circular(10)),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
                               ),
                               child: Column(
                                 children: [
                                   Container(
                                     padding: EdgeInsets.only(bottom: 10),
                                     decoration: BoxDecoration(
-                                      border: Border(
-                                        bottom: BorderSide(
-                                          style: BorderStyle.solid, width: 2, color: Colors.black45
-                                        )
-                                      )
-                                    ),
+                                        border: Border(
+                                            bottom: BorderSide(
+                                                style: BorderStyle.solid,
+                                                width: 2,
+                                                color: Colors.black45))),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -658,12 +661,9 @@ class rekap extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                
                                   Container(
                                     padding: EdgeInsets.only(top: 5),
-                                    decoration: BoxDecoration(
-                                      
-                                    ),
+                                    decoration: BoxDecoration(),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -698,11 +698,9 @@ class rekap extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                   Container(
+                                  Container(
                                     padding: EdgeInsets.only(top: 5),
-                                    decoration: BoxDecoration(
-                                      
-                                    ),
+                                    decoration: BoxDecoration(),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -737,11 +735,9 @@ class rekap extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                Container(
+                                  Container(
                                     padding: EdgeInsets.only(top: 5),
-                                    decoration: BoxDecoration(
-                                      
-                                    ),
+                                    decoration: BoxDecoration(),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -815,8 +811,229 @@ class rekap extends StatelessWidget {
                       ],
                     ),
                   ),
-                
-                
+                  Text(
+                    'Laporan Pelanggaran',
+                    style: GoogleFonts.quicksand(
+                        textStyle: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black,
+                      fontSize: 20,
+                    )),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 20),
+                    padding: EdgeInsets.only(top: 5),
+                    width: 350,
+                    height: 250,
+                    decoration: BoxDecoration(
+                        color: Color(0xff7F669D),
+                        borderRadius: BorderRadius.all(Radius.circular(25))),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Container(
+                          padding:
+                              EdgeInsets.only(top: 10, left: 20, right: 20),
+                          width: 300,
+                          height: 40,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Jumlah Pelanggaran',
+                                    style: GoogleFonts.quicksand(
+                                        textStyle: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.black87,
+                                      fontSize: 16,
+                                    )),
+                                  ),
+                                  Text(
+                                    '1',
+                                    style: GoogleFonts.quicksand(
+                                        textStyle: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      color: Colors.black87,
+                                      fontSize: 16,
+                                    )),
+                                  )
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 15),
+                              padding:
+                                  EdgeInsets.only(top: 15, left: 20, right: 20),
+                              width: 300,
+                              height: 90,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(10)),
+                              ),
+                              child: Column(
+                                children: [
+                                  Container(
+                                    padding: EdgeInsets.only(bottom: 10),
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                            bottom: BorderSide(
+                                                style: BorderStyle.solid,
+                                                width: 2,
+                                                color: Colors.black45))),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          'No',
+                                          style: GoogleFonts.quicksand(
+                                              textStyle: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.black87,
+                                            fontSize: 16,
+                                          )),
+                                        ),
+                                        Text(
+                                          'Nama',
+                                          style: GoogleFonts.quicksand(
+                                              textStyle: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.black87,
+                                            fontSize: 16,
+                                          )),
+                                        ),
+                                        Text(
+                                          'Pelanggaran',
+                                          style: GoogleFonts.quicksand(
+                                              textStyle: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.black87,
+                                            fontSize: 16,
+                                          )),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    padding: EdgeInsets.only(top: 5),
+                                    decoration: BoxDecoration(),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          '1',
+                                          style: GoogleFonts.quicksand(
+                                              textStyle: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.black87,
+                                            fontSize: 16,
+                                          )),
+                                        ),
+                                        Text(
+                                          'Divadan Arya P',
+                                          style: GoogleFonts.quicksand(
+                                              textStyle: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.black87,
+                                            fontSize: 16,
+                                          )),
+                                        ),
+                                        Text(
+                                          'Tawuran',
+                                          style: GoogleFonts.quicksand(
+                                              textStyle: TextStyle(
+                                            fontWeight: FontWeight.w700,
+                                            color: Colors.black87,
+                                            fontSize: 16,
+                                          )),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          width: 300,
+                          height: 45,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(Icons.download),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                'Unduh Laporan Pelanggaran',
+                                style: GoogleFonts.quicksand(
+                                    textStyle: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                )),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    width: 350,
+                    height: 45,
+                    decoration: BoxDecoration(
+                        color: Color(0xff7F669D),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(Icons.download, color: Colors.white,),
+                        SizedBox(
+                          width: 5, 
+                        ),
+                        Text(
+                          'Unduh Laporan Hari Ini',
+                          style: GoogleFonts.quicksand(
+                              textStyle: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                            fontSize: 16,
+                          )),
+                        )
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
